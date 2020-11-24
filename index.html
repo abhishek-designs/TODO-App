@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/5514dc631b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>TODO App</title>
+  </head>
+  <body>
+      <!-- Container for whole app -->
+    <div id="todo-container">
+      <h1 class="head-1 light"><span class="primary">TODO</span> list</h1>
+
+      <!-- All the controls for the TODO list -->
+      <div class="todo-controls">
+
+        <!-- Contains both the user input -->
+          <div class="todo-inputs">
+
+              <!-- Input to add the item into the list -->
+              <div class="todo-add-input">
+                  <input type="text" class="item-input">
+                  <button class="btn btn-primary add-btn">
+                    <i class="fa fa-plus-circle"></i>
+                  </button>
+              </div>
+
+              <!-- Select input to filter the TODO -->
+              <div class="todo-select-input">
+                  <select>
+                      <option value="All">All</option>
+                      <option value="Completed">Completed</option>
+                      <option value="Pending">Pending</option>
+                  </select>
+              </div>
+
+          </div>
+
+          <!-- Container for all the TODO list added by the user -->
+          <div class="todo-lists">
+              <ul class="todo-list">
+                <!-- Items injected through JavaScript -->
+              </ul>
+          </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,271 @@
+/* Importing font */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+
+/* Variables */
+:root {
+  --primary-color: #1ba3ef;
+  --danger-color: #f66e6e;
+  --med-color: #5f5f5f;
+  --semi-med-color: #5f5f5f;
+  --dark-color: #474747;
+  --light-color: #e8e8e8;
+  --primary-font: "Ubuntu", sans-serif;
+}
+/* Default reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--primary-font);
+  line-height: 1.4;
+  background: var(--dark-color);
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+p {
+  padding-bottom: 0.6rem;
+}
+
+input,
+select {
+  background: var(--light-color);
+}
+
+/* Predefined classes */
+.head-1 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+.danger {
+  color: var(--danger-color);
+}
+.dark {
+  color: var(--dark-color);
+}
+.med {
+  color: var(--med-color);
+}
+.semi-med {
+  color: var(--semi-med-color);
+}
+.light {
+  color: var(--light-color);
+}
+
+.btn {
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  color: var(--light-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}
+.btn-danger {
+  background-color: var(--danger-color);
+}
+.btn-danger:hover {
+  background-color: var(--light-color);
+  color: var(--danger-color);
+}
+
+.btn i {
+  pointer-events: none;
+}
+
+.checked {
+  color: var(--light-color);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* TODO App styling */
+#todo-container {
+  width: 45%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.todo-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.todo-add-input {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.todo-add-input input {
+  outline: 0;
+  border: none;
+  width: 25rem;
+  color: var(--med-color);
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  padding: 1rem 0.6rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.todo-add-input .add-btn {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.todo-select-input {
+  position: relative;
+  overflow: hidden;
+}
+
+.todo-select-input select {
+  /* position: relative; */
+  appearance: none;
+  border: none;
+  outline: 0;
+  padding: 1rem 0.6rem;
+  font-size: 1.2rem;
+  color: var(--med-color);
+  width: 10rem;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: var(--primary-font);
+}
+
+.todo-select-input::after {
+  content: "\25BC";
+  position: absolute;
+  color: var(--light-color);
+  padding: 1rem;
+  font-size: 1rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  pointer-events: none;
+  background: var(--primary-color);
+  top: 0;
+  right: 0;
+}
+
+.todo-select-input:hover::after {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}
+
+.todo-lists {
+  width: 100%;
+  margin-top: 7rem;
+}
+
+.todo-item {
+  width: 100%;
+  background: var(--med-color);
+  height: 3.5rem;
+  border-radius: 10px;
+  padding: 0.6rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.task {
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+
+.btn-grp {
+  display: flex;
+}
+
+.btn-grp .btn {
+  padding: 0.8rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .head-1 {
+    font-size: 2rem;
+  }
+
+  #todo-container {
+    width: 70%;
+  }
+
+  .todo-inputs {
+    flex-direction: column;
+  }
+
+  .todo-add-input input {
+    width: 10rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .todo-add-input .add-btn {
+    padding: 0.6rem;
+  }
+
+  .todo-select-input {
+    margin-top: 1rem;
+  }
+
+  .todo-select-input select {
+    width: 10rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .todo-select-input::after {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .todo-item {
+    height: 3rem;
+  }
+
+  .btn-grp .btn {
+    height: 2rem;
+    width: 2rem;
+    font-size: 0.8rem;
+  }
+}
